@@ -1,0 +1,38 @@
+using System;
+
+namespace HelloWorld
+{
+  class Program
+  {
+  
+    static void Main(string[] args)
+    {
+   	  int kills = 69;
+      int deaths = 96;
+      
+  	  float gold = 3633.33f;
+      
+ 	  double weight = 363.33d;
+      
+  	  string Name = "Susan";
+      string Animal = "Dog";
+      
+ 	  bool alive = true;
+      bool scorePositive = false;
+      
+      char middleInitial = 'S';
+      char lastInitail = 's';
+    
+      Console.WriteLine(kills);
+      Console.WriteLine(deaths);
+      Console.WriteLine(gold);
+      Console.WriteLine(weight);
+      Console.WriteLine(Name);
+      Console.WriteLine(Animal);
+      Console.WriteLine(alive);
+      Console.WriteLine(scorePositive);
+      Console.WriteLine(middleInitial);
+      Console.WriteLine(lastInitail);
+    }
+  }
+}
