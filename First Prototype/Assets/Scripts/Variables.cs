@@ -26,7 +26,7 @@ public class Variables : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    // Update is called once per framee
     void Update()
     {
         
