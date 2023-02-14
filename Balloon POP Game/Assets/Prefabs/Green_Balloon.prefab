@@ -69,3 +69,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fd763720c640144dadf6e1f8d99920f, type: 3}
+--- !u!1 &1212006070966224407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8327914657988729565, guid: 1fd763720c640144dadf6e1f8d99920f, type: 3}
+  m_PrefabInstance: {fileID: 7152661081752657098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1275808255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212006070966224407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0448586a59377c4aad9e1a28d2a1455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickToPop: 2
+  scaleToIncrease: 0.35
+  scoreManager: {fileID: 0}
+  scoreToGive: 50
+--- !u!114 &1275808256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212006070966224407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2486b1bf97696e34d931b750300e74e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  upperBound: 10
+  scoreManager: {fileID: 0}
+  balloon: {fileID: 0}
