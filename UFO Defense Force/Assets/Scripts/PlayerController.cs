@@ -11,8 +11,12 @@ public class PlayerController : MonoBehaviour
 
     public Transform blaster;
     public GameObject lazerBolt;
-
-
+    public Transform blasterL;
+    public GameObject lazerBoltL;
+    public Transform blasterR;
+    public GameObject lazerBoltR;
+    bool powerL = true;
+    bool powerR = true;
 
     // Update is called once per frame
     void Update()
@@ -40,6 +44,20 @@ public class PlayerController : MonoBehaviour
             Instantiate(lazerBolt, blaster.position, lazerBolt.transform.rotation);
         }
 
+        if(powerL = true)
+        {
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+            Instantiate(lazerBolt, blasterL.position, lazerBoltL.Transform.rotation);
+            }
+        }
+        if(powerR = true)
+        {
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+            Instantiate(lazerBolt, blasterR.position, lazerBoltR.Transform.rotation);
+            }
+        }
     }
 
     // Delete any object with a trigger that hits the player
