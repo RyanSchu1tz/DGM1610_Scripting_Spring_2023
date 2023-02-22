@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomItemSpawn : MonoBehaviour
+public class ItemSpawnManager
+: MonoBehaviour
 {
     public GameObject[] ufoPrefabs; // array to store ufo ships
     private float spawnRangeX = 10f;
     private float spawnPosZ = 10f;
 
-    private float startDelay = 2f;
-    private float spawnInterval = 1.5f;
+    private float startDelay = 4f;
+    private float spawnInterval = 4.5f;
 
     void Start()
     {
