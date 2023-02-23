@@ -4,9 +4,35 @@ using UnityEngine;
 
 public class DetectCollision : MonoBehaviour
 {
+
+    //private ScoreManager scoreManager; // A variable to hole the reference to the scormanager
+    //public int scoreToGive;
+    //public ParicleSystem explosionParticle; // Store the particle System
+
+
+    // Start is called before the first fram update
+    void Start()
+    {
+           //scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); //Reference scoreManager
+
+    }
+
     void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject); // Destroy self
-        Destroy(other.gameObject); // Destroy object hit
-    }
+        if(other.gameObject.CompareTag("LazerBolt"))
+        {
+            Destroy(gameObject); // Destroy this game object (UFO)
+            Destroy(other.gameObject); //Destroy the other game object it hits
+        }
+        
+    //Explosion();
+    //scoreManager.IncreaseScore(scoreToGive); // Increase Score
+}     
+
+/*
+void Explosion()
+{
+    Instantiate(explosionParticle, transform.position, transform.rotation);
+}
+*/
 }
