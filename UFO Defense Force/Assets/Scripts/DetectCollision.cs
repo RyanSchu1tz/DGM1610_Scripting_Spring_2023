@@ -5,15 +5,15 @@ using UnityEngine;
 public class DetectCollision : MonoBehaviour
 {
 
-    //private ScoreManager scoreManager; // A variable to hole the reference to the scormanager
-    //public int scoreToGive;
-    //public ParicleSystem explosionParticle; // Store the particle System
+    private ScoreManager scoreManager; // A variable to hole the reference to the scormanager
+    public int scoreToGive;
+    public ParticleSystem explosionParticle; // Store the particle System
 
 
     // Start is called before the first fram update
     void Start()
     {
-           //scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); //Reference scoreManager
+           scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); //Reference scoreManager
 
     }
 
@@ -26,13 +26,13 @@ public class DetectCollision : MonoBehaviour
         }
         
     //Explosion();
-    //scoreManager.IncreaseScore(scoreToGive); // Increase Score
+    scoreManager.IncreaseScore(scoreToGive); // Increase Score
 }     
 
-/*
-void Explosion()
-{
-    Instantiate(explosionParticle, transform.position, transform.rotation);
-}
-*/
+
+    void Explosion()
+    {
+        Instantiate(explosionParticle, transform.position, transform.rotation);
+    }
+
 }
