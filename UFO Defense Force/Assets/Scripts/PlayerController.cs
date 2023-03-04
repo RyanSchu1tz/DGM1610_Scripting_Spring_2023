@@ -17,6 +17,14 @@ public class PlayerController : MonoBehaviour
     // public GameObject lazerBoltR;
     // bool powerL = true;
     // bool powerR = true;
+    private AudioSource blasterAudio;
+    public AudioClip laserBlast;
+
+    void Start()
+    {
+        // get audiosource component
+        blasterAudio = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -40,6 +48,7 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
+        blasterAudio.PlayOneShot(laserBlast,1.0f);
         //create laserBolt at the blaster transform position mainting the objects rotation
             Instantiate(lazerBolt, blaster.position, lazerBolt.transform.rotation);
         }
