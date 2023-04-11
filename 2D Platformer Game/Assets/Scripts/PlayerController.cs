@@ -24,23 +24,33 @@ public class PlayerController : MonoBehaviour
 
     public bool doubleJump;
 
+    [Header("Animations")]
+    private Animator playerAnim;
+
 
     // Start is called before the first frame update
     void Start()
     {
         //Get rigidnody component reference
         rb = GetComponent<Rigidbody2D>();
+        playerAnim = GetComponent<Animator>(); 
     }
 
     // Fixed Update is called a fixed or set number of frames. ...
     void FixedUpdate()
     {
-        
+        if(moveInput > 0 || moveInput < 0)
+        {
+            playerAnim.SetBool("isWalking", true);
+        }
+        else
+        {
+            playerAnim.SetBool("isWalking", false);
+        }
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround); // Define what is ground and when on ground
 
         moveInput = Input.GetAxis("Horizontal"); // Get the Horizontal keybinding, return value of -1 to 1
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-
         // if the player is moving right but facing left flip the player right
         if(!isFacingRight && moveInput > 0)
         {
@@ -76,10 +86,12 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce; // makes the player jumo
             doubleJump = false;
+            playerAnim.SetTrigger("Jump_Trig");
         }
         else if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && isGrounded)
         {
             rb.velocity = Vector2.up * jumpForce;// Apply jumpForce to player making the player jump
+            playerAnim.SetTrigger("Jump_Trig");
         }
     }
 
